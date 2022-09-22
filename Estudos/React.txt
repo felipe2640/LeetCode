@@ -1,0 +1,67 @@
+Technical React
+
+
+1. When Mounting of a React Component Class is happening which are the methods executed and in which order? 
+
+1 - constructor() : initial state
+2 - getDerivedStateFromProps(): This is the natural place to set the state object based on the initial props
+3 - render(): is the method that actually outputs the HTML to the DOM.
+4 - componentDidMount(): is called after the component is rendered.
+
+2. When Updating of a React Component Class is happening which are the methods executed and in which order?. 
+
+1 - getDerivedStateFromProps(): still the natural place to set the state object based on the initial props.
+2 - shouldComponentUpdate(): return a Boolean value that specifies whether React should continue with the rendering or not.
+3 - render(): gets updated, it has to re-render the HTML to the DOM, with the new changes.
+4 - getSnapshotBeforeUpdate(): you can check what the values were before the update.
+5 - componentDidUpdate(): method is called after the component is updated in the DOM.
+
+3. What are the differences between controlled and uncontrolled input elements in React? 
+
+ In a controlled component, form data is handled by a React component. Whereas in uncontrolled components, form data is handled by the DOM itself. 
+
+4. What is "key" attribute in a React component and why are them used for? 
+
+Keys help React identify which items have changed, are added, or are removed.
+
+S. What is "ref" attribute in a React component and why are them used for? 
+
+Refs provide a way to access DOM nodes or React elements created in the render method.
+
+6. What is a Higher Order Component in React and how does it work? 
+
+A higher-order component (HOC) is an advanced technique in React for reusing component logic.
+
+7. What is a Pure Function? 
+
+A function (a block of code) that always returns the same result if the same arguments are passed.
+ex: function(value){ return value + 1}
+
+8. What can you say about stateless components? Can you tell me some characteristics? 
+
+Don't have any state, construction with functions
+
+9. What is Redux. how it works and why is it commonly used in React applications? 
+
+It's implementation the Flux. One store for all application to stock all states. It's immutable only change with action.
+
+10. Can you use state in a functional component? 
+
+States can be used in Class Components, Only used  with the use React Hook for example useState
+
+11. What can you say about the useEffect hook? 
+
+Helper hook to complete de something after the render 
+
+12. Can you name at least other four hooks? 
+
+ - Basic Hooks: useState, useEffect and useContext
+
+ - Additional Hooks: useReducer,useCallback,useMemo,useRef,useImperativeHandle,useLayoutEffect,useDebugValue,useDeferredValue,useTransition and useId
+
+13. How does React manipulate the native browser events? 
+
+When a native event is fired, React hands it over to each plugin in the EventPluginHub. The plugin then uses different information (like the event’s name or its DOM target) to extract some synthetic event(s).
+
+
+
